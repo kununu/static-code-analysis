@@ -1,0 +1,9 @@
+name: "kununu javascript"
+baseProfile: "qodana.recommended"
+inspections:
+  - inspection: JsCoverageInspection
+    severity: TYPO
+  - group: ALL
+    ignore:
+      - "**/*.spec.*"
+      - "**/*.d.ts"

@@ -1,0 +1,21 @@
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+### vim ###
+.vim/
+
+### VisualStudioCode ###
+.vscode/
+
+### IntelliJ IDEA IDEs ###
+.idea/
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+
+# Manual set of ignored files
+.env
