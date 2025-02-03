@@ -7,3 +7,4 @@ inspections:
     ignore:
       - "**/*.spec.*"
       - "**/*.d.ts"
+      - "webpack.*.js"
