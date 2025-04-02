@@ -3,9 +3,9 @@ baseProfile: "qodana.recommended"
 inspections:
   - inspection: Annotator
     enabled: true
-  - inspection: MissingSinceTagDocInspection
-    enabled: true
   - inspection: CheckDependencyLicenses
+    enabled: true
+  - inspection: PhpComposerDuplicatedRequirementInspection
     enabled: true
 ### ------------- Taint analysis ------------- ###
   - inspection: PhpTaintFunctionInspection
