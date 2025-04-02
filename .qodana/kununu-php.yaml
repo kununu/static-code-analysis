@@ -6,6 +6,8 @@ inspections:
 # These inspections ensure basic code quality and dependency compliance.
   - inspection: Annotator
     enabled: true
+    ignore:
+      - services/tests/**
   - inspection: CheckDependencyLicenses
     enabled: true
   - inspection: PhpComposerDuplicatedRequirementInspection
