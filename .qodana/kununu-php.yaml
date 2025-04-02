@@ -1,2 +1,33 @@
-name: "kununu javascript"
+name: "kununu php"
 baseProfile: "qodana.recommended"
+inspections:
+  - inspection: Annotator
+    enabled: true
+  - inspection: MissingSinceTagDocInspection
+    enabled: true
+  - inspection: CheckDependencyLicenses
+    enabled: true
+### ------------- Taint analysis ------------- ###
+  - inspection: PhpTaintFunctionInspection
+    enabled: true
+  - inspection: PhpVulnerablePathsInspection
+    enabled: true
+### ------------- Taint analysis ------------- ###
+  - inspection: PhpUnhandledExceptionInspection
+    ignore:
+      - services/tests/**
+  - inspection: PhpRedundantCatchClauseInspection
+    ignore:
+      - services/tests/**
+  - inspection: PhpDqlBuilderUnknownModelInspection
+    ignore:
+      - services/tests/**
+  - inspection: PhpPossiblePolymorphicInvocationInspection
+    ignore:
+      - services/tests/**
+  - inspection: HardcodedPasswords
+    ignore:
+      - services/tests/**
+  - inspection: DuplicatedCode
+    ignore:
+      - services/tests/**
