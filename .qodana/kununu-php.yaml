@@ -1,18 +1,26 @@
 name: "kununu php"
 baseProfile: "qodana.recommended"
 inspections:
+
+### GENERAL INSPECTIONS ###
+# These inspections ensure basic code quality and dependency compliance.
   - inspection: Annotator
     enabled: true
   - inspection: CheckDependencyLicenses
     enabled: true
   - inspection: PhpComposerDuplicatedRequirementInspection
     enabled: true
-### ------------- Taint analysis ------------- ###
+
+### TAINT ANALYSIS - MANDATORY (BEGIN) ###
+# These security-focused inspections detect potential vulnerabilities in the code.
   - inspection: PhpTaintFunctionInspection
     enabled: true
   - inspection: PhpVulnerablePathsInspection
     enabled: true
-### ------------- Taint analysis ------------- ###
+### TAINT ANALYSIS - MANDATORY (END) ###
+
+### INSPECTIONS WITH EXCLUSIONS ###
+# These inspections are enabled but will ignore files in the specified paths.
   - inspection: PhpUnhandledExceptionInspection
     ignore:
       - services/tests/**
